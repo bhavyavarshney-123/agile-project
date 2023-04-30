@@ -1,13 +1,13 @@
 pipeline {
     agent any
     stages {
-        stage('git repo & clean') {
-            steps {
-             // bat "rmdir  /s /q agile-project"
-                bat "git clone https://github.com/bhavyavarshney-123/agile-project.git"
-                bat "mvn clean -f agile-project"
-            }
-        }
+//         stage('git repo & clean') {
+//             steps {
+//              // bat "rmdir  /s /q agile-project"
+//                 bat "git clone https://github.com/bhavyavarshney-123/agile-project.git"
+//                 bat "mvn clean -f agile-project"
+//             }
+//         }
         stage('install') {
             steps {
                 bat "mvn install -f agile-project"
